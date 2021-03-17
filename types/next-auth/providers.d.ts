@@ -11,6 +11,7 @@ export interface Providers {
     Discord: Discord;
     Email: Email;
     Facebook: Facebook;
+    FusionAuth: FusionAuth;
     GitHub: GitHub;
     GitLab: GitLab;
     Google: Google;
@@ -128,6 +129,20 @@ interface ProviderFacebookOptions extends GenericObject {
     name?: string;
     clientId: string;
     clientSecret: string;
+}
+
+/**
+ * FusionAuth
+ */
+type FusionAuth = (options: ProviderFusionAuthOptions) => GenericReturnConfig;
+
+interface ProviderFusionAuthOptions extends GenericObject {
+    id?: string;
+    name?: string;
+    domain: string;
+    clientId: string;
+    clientSecret: string;
+    tenantId?: string;
 }
 
 /**

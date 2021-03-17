@@ -380,6 +380,13 @@ Providers.Facebook({
 });
 
 // $ExpectType GenericReturnConfig
+Providers.FusionAuth({
+    domain: 'foo.auth0.com',
+    clientId: 'foo123',
+    clientSecret: 'bar123',
+});
+
+// $ExpectType GenericReturnConfig
 Providers.GitHub({
     clientId: 'foo123',
     clientSecret: 'bar123',
